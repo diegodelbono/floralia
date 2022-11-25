@@ -1,0 +1,40 @@
+// Flex grid
+
+@use "sass:math";
+
+$flex-grid--cols: 3;
+$flex-grid--gap: 2rem;
+
+.flex-grid {
+  @include flex(flex-start, space-between);
+  margin: 0 -1rem;
+
+  @include large {
+    flex-direction: column;
+  }
+
+  &__col {
+    flex: 0 0 33.3%;
+    max-width: 33.3%;
+    padding: 0 1rem;
+    width: 100%;
+
+    @include large {
+      flex: 1;
+      max-width: 100%;
+    }
+
+    &--full {
+      flex: 0 0 66.6%;
+      max-width: 66.6%;
+      padding: 0 1rem;
+      overflow: hidden;
+      width: 100%;
+
+      @include large {
+        flex: 1;
+        max-width: 100%;
+      }
+    }
+  }
+}

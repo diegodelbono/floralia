@@ -1,0 +1,120 @@
+// Components
+
+// Coupons
+.coupons {
+  &__form {
+    @include flex(center, space-between);
+
+    label {
+      display: none;
+    }
+  }
+
+  @include small {
+    margin: 2rem 0;
+    width: 100%;
+  }
+}
+
+// Actions
+.shop-actions {
+  @include flex(flex-start, space-between);
+  margin: 4rem 0;
+
+  @include small {
+    flex-direction: column-reverse;
+  }
+}
+
+// Btn update
+.btn--update {
+  @include small {
+    margin-left: auto;
+    max-width: 50%;
+  }
+}
+
+// Cart price
+.cart-price {
+  @include flex(flex-end, space-between);
+  margin-left: auto;
+  width: 50%;
+
+  @include small {
+    width: 100%;
+  }
+}
+
+.checkout-button {
+  float: right;
+  width: 50%;
+
+  @include small {
+    width: 100%;
+  }
+}
+
+// Message
+.woocommerce-notices-wrapper {
+  .woocommerce-message {
+    @include flex(center, space-between);
+    flex-direction: row-reverse;
+    margin-bottom: 2rem;
+
+    .button {
+      @extend .btn--small;
+      display: inline-block;
+    }
+  }
+}
+
+.remove {
+  @include flex(flex-start, center);
+  @include position(absolute, $bottom: 1rem, $left: 1rem);
+
+  @include small {
+    @include position(relative, $bottom: 0, $left: 0);
+  }
+
+  * {
+    line-height: 1.5rem;
+  }
+
+  &__icon {
+    @extend .font-size-lg;
+    margin-right: 1rem;
+  }
+
+  &__text {
+    @include small {
+      display: none;
+    }
+  }
+}
+
+// Quantity
+.quantity {
+  display: flex;
+
+  button,
+  .input-text {
+    background: transparent;
+    cursor: pointer;
+    padding: 0.5rem;
+    width: 2rem;
+  }
+
+  .input-text {
+    width: 3rem;
+    text-align: center;
+  }
+}
+
+// Disabled
+.woocommerce-result-count,
+.woocommerce-ordering,
+.woocommerce-product-gallery__trigger,
+.related,
+.woocommerce-form-coupon-toggle {
+  display: none !important;
+}

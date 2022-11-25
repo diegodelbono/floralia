@@ -1,0 +1,81 @@
+body {
+  background: $bg-body;
+  min-height: 100vh;
+
+  &.body--fixed {
+    overflow: hidden;
+  }
+
+  @include small {
+    background-size: 100%;
+  }
+
+  &.home {
+    background: url("../image/home-bg.png") no-repeat right bottom $bg-body-home;
+    background-size: 40%;
+
+    @include small {
+      background-size: 100%;
+    }
+  }
+
+  &.page-template-page-care {
+    background: url("../image/bg-care.png") no-repeat left bottom #bfba91;
+    background-size: 30%;
+
+    @include small {
+      background-size: 60%;
+    }
+  }
+
+  &.page-template-page-contact {
+    background: url("../image/bg-contact.png") no-repeat center bottom #deb8a1;
+    background-size: contain;
+  }
+
+  &.page-template-page-politics {
+    background: url("../image/bg-polity.png") no-repeat left bottom #ede6de;
+    background-size: 35%;
+
+    @include small {
+      background-size: 60%;
+    }
+  }
+
+  &.page-template-page-philosophy {
+    background: url("../image/bg-philosophy.png") no-repeat right bottom #dbcca1;
+  }
+
+  &.woocommerce-order-received {
+    background: url("../image/bg-order.png") no-repeat left bottom white;
+    background-size: 45%;
+
+    @include small {
+      background-size: 80%;
+    }
+  }
+}
+
+html {
+  font-size: 16px;
+}
+
+* {
+  border: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}

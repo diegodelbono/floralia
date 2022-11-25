@@ -1,0 +1,47 @@
+// Gallery
+
+.owl {
+  z-index: 2;
+
+  &-dots {
+    display: none;
+  }
+
+  &-nav {
+    @include position(absolute, $right: 0);
+    margin-top: -2.75rem !important;
+
+    @include medium {
+      margin: 0;
+    }
+
+    [class*="owl-"] {
+      background: $primary !important;
+      height: 1rem;
+      width: 1rem;
+      margin: 0;
+      z-index: 2;
+    }
+
+    .owl-next {
+      @extend .i--next;
+    }
+
+    .owl-prev {
+      @extend .i--prev;
+    }
+  }
+
+  &--single {
+    .owl-nav {
+      @include position(absolute, $left: 0, $width: 100%, $top: 55%);
+      @include flex(flex-start, space-between);
+      margin: 0;
+
+      [class*="owl-"] {
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+  }
+}

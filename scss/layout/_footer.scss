@@ -1,0 +1,21 @@
+// Footer
+
+$footer--padding: 1.25rem 0;
+$footer--item-margin: 0.5rem 0;
+
+.footer {
+  &__container {
+    @include flex(center, space-between);
+    padding: $footer--padding;
+
+    * {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    @include small {
+      margin: $footer--item-margin;
+    }
+  }
+}

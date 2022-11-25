@@ -1,0 +1,29 @@
+// Icons
+
+$i--size: 3rem;
+$i--size-sm: 2.5rem;
+
+.i {
+  background: $black;
+  display: block;
+  height: $i--size;
+  width: $i--size;
+  text-indent: -9999px;
+
+  @include small {
+    height: $i--size-sm;
+    width: $i--size-sm;
+  }
+
+  &--cart {
+    @include mask("../assets/app/i-cart.svg");
+  }
+
+  &--next {
+    @include mask("../assets/app/i-next.svg");
+  }
+
+  &--prev {
+    @include mask("../assets/app/i-prev.svg");
+  }
+}

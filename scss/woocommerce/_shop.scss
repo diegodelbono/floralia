@@ -1,0 +1,68 @@
+// Woo: Shop table
+
+$table--border: $border-base;
+$table--margin: 2rem;
+$table--padding: 1rem;
+$table--padding-sm: 0.25rem;
+
+$table--thumbnail-width: 32%;
+
+.shop_table {
+  margin-bottom: $table--margin;
+  width: 100%;
+
+  .product-remove,
+  .product-price {
+    display: none !important;
+  }
+
+  .product-name {
+    @include medium {
+      @include flex(center, space-between);
+    }
+  }
+
+  .product-thumbnail {
+    padding: $table--padding 0;
+    width: $table--thumbnail-width;
+
+    @include medium {
+      border-top: $table--border;
+      width: 100%;
+    }
+  }
+
+  .product-quantity {
+    @include medium {
+      @include flex(center, space-between);
+
+      .input-text {
+        width: 3rem;
+      }
+    }
+  }
+
+  .product-subtotal {
+    text-align: right;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody {
+    td {
+      border-top: $table--border;
+      padding: $table--padding;
+      position: relative;
+      vertical-align: top;
+
+      @include medium {
+        border: none;
+        display: block;
+        padding: $table--padding-sm 0;
+        width: 100%;
+      }
+    }
+  }
+}

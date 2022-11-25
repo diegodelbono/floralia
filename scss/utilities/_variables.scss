@@ -1,0 +1,56 @@
+// Colors
+$black: #000000;
+$grey: #a8a394;
+$red: red;
+$beige: #ede5de;
+$white: white;
+$brown: #8f7d66;
+
+$error: $red;
+
+$primary: $black;
+$secondary: $beige;
+$tertiary: $grey;
+
+$theme-colors: (
+  "primary": $black,
+  "secondary": $beige,
+  "tertiary": $grey,
+  "white": $white,
+  "brown": $brown,
+);
+
+$bg-body-home: $beige;
+$bg-body: $white;
+
+// Fonts
+$founders-groteskr: "founders-groteskr";
+$founders-groteskr-light: "founders-groteskr-light";
+
+$font-family-base: $founders-groteskr;
+$font-family-light: $founders-groteskr-light;
+$font-color-base: $black;
+
+$font-size-text-lg: 1.9rem;
+$font-size-text: 1.3rem;
+$font-size-text-extra-lg: 5rem;
+
+$font-size-text-lg--sm: 1.5rem;
+$font-size-text--sm: 1rem;
+$font-size-text-extra-lg--sm: 3rem;
+
+$font-size-title: $font-size-text-lg;
+$font-size-title--sm: $font-size-text-lg--sm;
+
+$font-weight-regular: 400;
+
+$letter-spacing: -0.3px;
+
+// breakpoint
+$large: 1024px;
+$medium: 768px;
+$small: 640px;
+
+// Var
+$border: 1px;
+$border-base: $border solid $primary;

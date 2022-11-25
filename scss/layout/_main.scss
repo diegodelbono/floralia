@@ -1,0 +1,10 @@
+// Main
+
+.main {
+  min-height: calc(100vh - 200px);
+  padding: 2rem 0;
+
+  @include medium {
+    padding: 0;
+  }
+}

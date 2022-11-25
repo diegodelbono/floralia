@@ -1,0 +1,23 @@
+// Logo
+$logo--bg: $primary;
+
+$logo--height: 3rem;
+$logo--width: 14rem;
+
+$logo--height-sm: 3rem;
+$logo--width-sm: 10rem;
+
+.logo {
+  @include mask("../assets/logo-floralia.svg");
+
+  background-color: $logo--bg;
+  display: block;
+  height: $logo--height;
+  width: $logo--width;
+  text-indent: -999px;
+
+  @include small {
+    height: $logo--height-sm;
+    width: $logo--width-sm;
+  }
+}

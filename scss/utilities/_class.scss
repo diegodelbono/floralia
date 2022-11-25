@@ -1,0 +1,102 @@
+// Class
+.hide {
+  display: none;
+}
+
+.hide-for-small {
+  @media (max-width: $small) {
+    display: none;
+  }
+}
+
+.show-for-small {
+  display: none;
+
+  @media (max-width: $small) {
+    display: block;
+  }
+}
+
+.font-size-extra-lg,
+.font-size-extra-lg * {
+  font-family: $founders-groteskr-light;
+  font-size: $font-size-text-extra-lg;
+  letter-spacing: 0;
+
+  @include medium {
+    font-size: $font-size-text-extra-lg--sm;
+  }
+}
+
+.font-size-lg,
+.font-size-lg * {
+  font-size: $font-size-title;
+  letter-spacing: 0;
+
+  @include medium {
+    font-size: $font-size-title--sm;
+  }
+}
+
+.font-size-sm,
+.font-size-sm * {
+  font-size: $font-size-text !important;
+
+  @include medium {
+    font-size: $font-size-text--sm !important;
+  }
+}
+
+// General class
+@each $name,
+$color in $theme-colors {
+
+  // Background color
+  .bg--#{$name} {
+    background: $color !important;
+  }
+
+  // Text color
+  .text--#{$name},
+  .text--#{$name} * {
+    color: $color !important;
+  }
+}
+
+.border-top {
+  border-top: $border-base;
+  padding-top: 1rem;
+}
+
+.figure {
+  img {
+    height: auto;
+    width: 100%;
+  }
+
+  &__caption {
+    margin: 1rem 0;
+    padding: 0 4rem 0 0;
+  }
+}
+
+.half-content {
+  margin: 2rem 0;
+  width: 50%;
+
+  @include medium {
+    width: 100%;
+  }
+}
+
+.home-figure {
+  background: url("../image/picture-home.png") no-repeat left bottom;
+  background-size: contain;
+  height: 100vh;
+  width: auto;
+
+  @include medium {
+    background-position: center bottom;
+    height: 60vh;
+  }
+}

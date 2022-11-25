@@ -1,0 +1,46 @@
+// Article
+
+.article {
+  margin-bottom: 2rem;
+
+  &__thumb {
+    display: block;
+    position: relative;
+
+    .thumb {
+      &--show {
+        @include transition(all 0.5s ease);
+        opacity: 1;
+        z-index: 2;
+
+        img {
+          @include position(absolute,
+            $top: 0,
+            $left: 0,
+            $height: 100%,
+            $width: 100%);
+        }
+      }
+
+      &--hover {
+        z-index: 1;
+      }
+    }
+
+    @include hover-focus {
+      .thumb {
+        &--show {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  &__caption {
+    padding: 0.5rem 0;
+
+    p {
+      margin: 0;
+    }
+  }
+}

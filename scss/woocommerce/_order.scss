@@ -1,0 +1,23 @@
+// Order
+
+.woocommerce-order {
+  .order_details {
+    table {
+      border-collapse: collapse;
+
+      th,
+      td {
+        margin: 0;
+        padding: 0.125rem 0;
+      }
+    }
+  }
+
+  .woocommerce-thankyou-order-details,
+  .woocommerce-columns--addresses {
+    display: none;
+  }
+}
+
+
+// https: //floralia.uy/checkout/order-received/337/?key=wc_order_FKFGH8dHHikki

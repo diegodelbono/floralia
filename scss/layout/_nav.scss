@@ -1,0 +1,156 @@
+// NAV
+$nav--bg: rgba($secondary, 0.95);
+$nav--icon-gap: 0.125rem;
+$nav--icon-height: 2rem;
+$nav--icon-width: 4rem;
+
+$nav--line-height: 0.125rem;
+
+.nav {
+  @include position(fixed, $top: 0, $left: 0, $height: 100vh, $width: 100%);
+  background: $nav--bg;
+  display: none;
+  z-index: 2;
+
+  &__wrapper {
+    @include flex(center, center);
+    @include position(relative, $height: 100%, $width: 100%);
+  }
+
+  .menu {
+    text-align: center;
+
+    a {
+      @include transition(all 0.25s ease);
+      @extend .font-size-extra-lg;
+      text-transform: uppercase;
+
+      @include hover-focus {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+// Open menu
+.i-nav {
+  cursor: pointer;
+  position: relative;
+  height: $nav--icon-height;
+  width: $nav--icon-width;
+  z-index: 999;
+
+  @include small {
+    width: 2.5rem;
+  }
+
+  span {
+    @include position(absolute);
+    @include transition(all 0.25s ease);
+    background: $primary;
+    height: $nav--line-height;
+    width: 100%;
+    z-index: 20;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: 10px;
+    }
+
+    &:nth-child(3) {
+      top: 20px;
+    }
+
+    &:nth-child(4) {
+      top: 30px;
+    }
+  }
+
+  @include hover-focus {
+    span {
+      opacity: 0.5;
+    }
+  }
+
+  &.active {
+    span {
+      background: $primary;
+
+      &:nth-child(1) {
+        top: 10px;
+        rotate: 45deg;
+      }
+
+      &:nth-child(2) {
+        top: 10px;
+        rotate: -45deg;
+      }
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        display: none;
+      }
+    }
+  }
+}
+
+// Nav shop
+.nav-shop {
+  margin-bottom: 4rem;
+
+  @include medium {
+    margin-bottom: 2rem;
+  }
+
+  .menu {
+    @include flex(center, flex-start);
+
+    &-item {
+      margin-right: 0.5rem;
+
+      a {
+        @include transition(all 0.25s ease);
+        @extend .font-size-lg;
+        @extend .text--tertiary;
+        text-transform: lowercase;
+
+        @include hover-focus {
+          opacity: 0.5;
+        }
+      }
+
+      &.current_page_item,
+      &.current-menu-item {
+        a {
+          @extend .text--primary;
+        }
+      }
+
+      &:not(:last-child) {
+        &::after {
+          color: $tertiary;
+          content: ",";
+        }
+      }
+    }
+  }
+}
+
+
+.languages {
+  display: flex;
+
+  li {
+    list-style-type: none;
+    margin: 0;
+    text-transform: uppercase;
+
+    &:not(:last-child):after {
+      content: "/";
+      margin: 0 0.5rem;
+    }
+  }
+}

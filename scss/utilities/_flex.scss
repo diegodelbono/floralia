@@ -1,0 +1,23 @@
+.flex {
+  display: flex;
+}
+
+.flex--center-y {
+  align-items: center !important;
+}
+
+.flex--center-x {
+  justify-content: center;
+}
+
+.flex--end-x {
+  justify-content: flex-end !important;
+}
+
+.flex--center {
+  margin: 0 auto;
+}
+
+.flex--end {
+  margin-left: auto;
+}

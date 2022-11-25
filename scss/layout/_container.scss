@@ -1,0 +1,14 @@
+// Container
+
+$container--padding: 0 5%;
+$container--padding-sm: 0 1rem;
+
+.container {
+  padding: $container--padding;
+  margin: 0 auto;
+  width: 100%;
+
+  @include medium {
+    padding: $container--padding-sm;
+  }
+}

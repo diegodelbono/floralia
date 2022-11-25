@@ -1,0 +1,53 @@
+// // Checkout
+.checkout {
+
+  .woocommerce-shipping-fields,
+  .woocommerce-billing-fields {
+    &__field-wrapper {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+
+      @include medium {
+        padding: 0;
+      }
+    }
+  }
+
+  .amount {
+    display: block;
+    text-align: right;
+  }
+}
+
+.checkout-list-product {
+  margin-bottom: 2rem;
+
+  .cart_item {
+    @include flex(flex-start, space-between);
+  }
+}
+
+.place-order {
+  margin: 2rem 0 0 auto;
+
+  @include medium {
+    width: 100%;
+  }
+}
+
+.checkout-section {
+  border-top: $border-base;
+  padding-top: 1rem;
+  margin-bottom: 5rem;
+
+  @include medium {
+    margin-bottom: 2rem;
+  }
+}
+
+.shipping {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+}

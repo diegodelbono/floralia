@@ -1,0 +1,83 @@
+// Form
+
+$form--margin: 0.5rem;
+
+$input--color: $primary;
+$input--padding: 0.5rem 0;
+
+$label--border: $border-base;
+$label--color: $tertiary;
+
+$textarea--height: 10rem;
+
+// Input
+.input-text {
+  @include appearance(none);
+  @include inputAutoFill(transparent, $input--color);
+
+  background: transparent;
+  border: none;
+  color: $input--color;
+  padding: $input--padding;
+  outline: 0;
+  width: 100%;
+}
+
+.input-textarea {
+  height: $textarea--height;
+  vertical-align: top;
+}
+
+// Form row
+.form-row {
+  margin-bottom: $form--margin;
+
+  br {
+    display: none;
+  }
+}
+
+// Label
+label {
+  color: $label--color;
+  display: block;
+  border-bottom: $label--border;
+  width: 100%;
+
+  .required {
+    color: $label--color;
+    text-decoration: none;
+  }
+}
+
+// .country_select,
+.country_select,
+.state_select {
+  @extend .input-text;
+  background: url("../assets/app/i-arrow.svg") right 1rem center no-repeat white;
+  background-size: 1rem;
+}
+
+span.select2-container {
+  display: none;
+}
+
+.wpcf7-not-valid-tip {
+  margin-bottom: 1rem;
+}
+
+.wpcf7 form .wpcf7-response-output {
+  border: none !important;
+  padding: 0 !important;
+  margin: 1rem 0 !important;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}

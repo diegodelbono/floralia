@@ -1,0 +1,38 @@
+// Payment
+
+.methods {
+  margin: 2rem 0;
+
+  li {
+    margin: 1rem 0;
+
+    label {
+      border: none;
+      display: inline;
+
+      img {
+        display: none;
+      }
+    }
+
+    .payment_box {
+      margin: 1rem 0;
+      width: 100%;
+    }
+  }
+}
+
+.woocommerce-order-details {
+  margin: 2rem 0;
+
+  .order_details {
+    margin: 1rem 0;
+
+    th,
+    td {
+      border: none;
+      padding: 0.5rem 0;
+      text-align: left;
+    }
+  }
+}

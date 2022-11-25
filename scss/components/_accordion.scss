@@ -1,0 +1,49 @@
+// Accordion
+
+$accordion--border: $border-base;
+$accordion--margin: 2rem;
+$accordion-item--margin: 0.5rem;
+$accordion-header--margin: 0.5rem;
+$accordion-content--padding: 2rem;
+$accordion-content--width: 50%;
+
+.accordion {
+  margin-bottom: $accordion--margin;
+
+  &__item {
+    margin-bottom: $accordion-item--margin;
+  }
+
+  &__header {
+    margin-bottom: $accordion-header--margin;
+    position: relative;
+    cursor: pointer;
+
+    &:after {
+      @include position(absolute, $right: 0, $top: 0);
+      content: "+";
+    }
+
+    &--active {
+      &:after {
+        content: "–";
+      }
+    }
+  }
+
+  &__content {
+    margin-left: auto;
+    padding-bottom: $accordion-content--padding;
+    width: $accordion-content--width;
+
+    @include large {
+      width: 100%;
+    }
+  }
+}
+
+.accordion-item {
+  border-top: $accordion--border;
+  padding: 1rem 0;
+  margin-bottom: 4rem;
+}

@@ -1,0 +1,31 @@
+// Header
+$header--padding: 2rem 0;
+
+.header {
+  padding: $header--padding;
+
+  &__container {
+    @include flex(flex-start, space-between);
+  }
+
+  &__menu {
+    @include flex(flex-end, center);
+    gap: 2rem;
+
+    &--item {
+      position: relative;
+
+      .count {
+        line-height: 0.5;
+        @include position(absolute,
+          $height: 0.75rem,
+          $right: 0.75rem,
+          $bottom: 0.25rem);
+      }
+    }
+
+    @include medium {
+      gap: 1rem;
+    }
+  }
+}

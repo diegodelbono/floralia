@@ -1,0 +1,33 @@
+* {
+  color: $font-color-base;
+  font-family: $font-family-base;
+  font-size: $font-size-text;
+  font-weight: $font-weight-regular;
+  letter-spacing: $letter-spacing;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: $font-size-title;
+  margin: 0;
+  letter-spacing: 0;
+}
+
+p {
+  font-size: $font-size-text;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+br {
+  @include medium {
+    display: none;
+  }
+}
